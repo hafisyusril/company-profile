@@ -1,9 +1,6 @@
 'use client'
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import AboutUs from "./about-us/page";
-import HeroSection from "@/components/HoreSection";
 import CompanyOverviewSection from "@/components/CompanyOverviewSection";
+import HeroSection from "@/components/HeroSection";
 import ServiceSection from "@/components/ServiceSection";
 import TestimonialSection from "@/components/TestimonialSection";
 

@@ -21,7 +21,7 @@ const HeroSection = () => {
           <h1 className="text-4xl font-bold text-[#3D2B1F]">Welcome to HORE</h1>
           <p className="text-lg text-[#4B3A2F]">
             Discover your daily dose of calm and joy in every cup. At HORE, we
-            don't just serve coffee — we craft moments of peace.
+            don&apos;t just serve coffee — we craft moments of peace.
           </p>
 
           <div className="border-l-4 border-[#035f41] pl-4">

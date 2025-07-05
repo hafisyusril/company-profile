@@ -22,7 +22,7 @@ const CompanyHistorySection = () => {
           </p>
           <p>
             Founded by a group of friends who believed in mindful living and
-            community values, HORE's first store opened in 2019 with a vision to
+            community values, HORE&apos;s first store opened in 2019 with a vision to
             blend great coffee with intentional living. Every cup is served not
             just with quality, but with heart.
           </p>

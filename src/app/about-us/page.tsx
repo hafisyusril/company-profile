@@ -1,5 +1,5 @@
 import CompanyCultureSection from '@/components/CompanyCultureSection'
-import CompanyHistorySection from '@/components/CompanyHistorySction'
+import CompanyHistorySection from '@/components/CompanyHistorySection'
 import TeamSection from '@/components/TeamSection'
 import React from 'react'
 
