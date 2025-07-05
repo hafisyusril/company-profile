@@ -1,9 +1,14 @@
+import CompanyCultureSection from '@/components/CompanyCultureSection'
+import CompanyHistorySection from '@/components/CompanyHistorySction'
+import TeamSection from '@/components/TeamSection'
 import React from 'react'
 
 const AboutUs = () => {
   return (
-    <div>
-      <p className='font-bold'>This is US</p>
+    <div className='container mx-auto px-4'>
+      <CompanyHistorySection />
+      <CompanyCultureSection />
+      <TeamSection />
     </div>
   )
 }

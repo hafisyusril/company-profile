@@ -1,58 +1,85 @@
-// components/Navbar.tsx
 "use client";
-
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X } from "lucide-react"; // Bisa diganti sesuai icon library kamu
+import Image from "next/image";
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Services", href: "/products" },
+    { label: "Teams", href: "/teams" },
+    { label: "Blog List", href: "/blog" },
+    { label: "Create Blog", href: "/blog/create" },
+  ];
 
   return (
-    <header className="bg-[#0F172A] text-[#D6E1FF] shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo / Brand */}
-        <Link href="/" className="text-xl font-bold text-green-400">
-          MyWebsite
+    <nav className="container mx-auto bg-[#f4f2ee] px-4 md:px-16 py-4 shadow-md">
+      <div className="flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/hore.avif"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="cursor-pointer"
+          />
+          <span className="text-[#24272B] font-semibold text-xl">Hore</span>
         </Link>
 
-        {/* Hamburger Button */}
-        <button
-          className="md:hidden text-[#D6E1FF] focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-6">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-[#24272B] hover:border-b-2 hover:border-green-500 hover:text-green-500 transition duration-150"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link
+            href="/login"
+            className="text-green-500 border border-green-500 px-4 py-1 rounded-md hover:bg-green-500 hover:text-[#0F172A] transition"
+          >
+            Login
+          </Link>
+        </div>
 
-        {/* Nav Links */}
-        <nav
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:flex md:items-center md:gap-6 absolute md:static top-16 left-0 w-full md:w-auto bg-[#0F172A] md:bg-transparent px-4 md:px-0 py-4 md:py-0`}
-        >
-          <Link href="/" className="block py-2 md:py-0 hover:text-green-400">
-            Home
-          </Link>
-          <Link href="/about" className="block py-2 md:py-0 hover:text-green-400">
-            About Us
-          </Link>
-          <Link href="/services" className="block py-2 md:py-0 hover:text-green-400">
-            Services
-          </Link>
-          <Link href="/teams" className="block py-2 md:py-0 hover:text-green-400">
-            Teams
-          </Link>
-          <Link href="/blog" className="block py-2 md:py-0 hover:text-green-400">
-            Blog List
-          </Link>
-          <Link href="/blog/create" className="block py-2 md:py-0 hover:text-green-400">
-            Create Blog
-          </Link>
-        </nav>
+        {/* Mobile Hamburger */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <Menu className="text-[#24272B]" />
+            </SheetTrigger>
+            <SheetContent side="right" className="px-6 py-4">
+              <SheetHeader>
+                <SheetTitle className="text-left text-lg text-green-600">Menu</SheetTitle>
+              </SheetHeader>
+              <div className="mt-6 space-y-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block text-[#24272B] hover:text-green-500 transition"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Link
+                  href="/login"
+                  className="inline-block text-green-500 border border-green-500 px-4 py-1 rounded-md hover:bg-green-500 hover:text-[#0F172A] transition"
+                >
+                  Login
+                </Link>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
