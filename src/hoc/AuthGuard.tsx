@@ -1,5 +1,5 @@
 import Loading from "@/components/Loading";
-import { useAuthStore } from "@/store/Auth";
+import { useAuthStore } from "@/store/auth";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
