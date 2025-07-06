@@ -21,7 +21,7 @@ const ServiceSection = () => {
           <div>
             <Link
               href="/products"
-              className="inline-block mt-2 px-6 py-2 text-green-600 border border-green-600 rounded hover:bg-green-600 hover:text-[#f4f2ee] transition"
+              className="inline-block mt-2 px-6 py-2 text-[#035f41] border border-[#035f41] rounded hover:bg-[#035f41] hover:text-white transition"
             >
               Explore Our Menu
             </Link>

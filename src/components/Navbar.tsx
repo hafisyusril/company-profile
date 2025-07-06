@@ -1,7 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 const Navbar = () => {
@@ -42,9 +48,15 @@ const Navbar = () => {
           ))}
           <Link
             href="/login"
-            className="text-green-500 border border-green-500 px-4 py-1 rounded-md hover:bg-green-500 hover:text-[#0F172A] transition"
+            className="text-[#035f41] border border-[#035f41] px-4 py-1 rounded-md hover:bg-[#035f41] hover:text-white transition"
           >
             Login
+          </Link>
+          <Link
+            href="/signup"
+            className="text-[#035f41] border border-[#035f41] px-4 py-1 rounded-md hover:bg-[#035f41] hover:text-white transition"
+          >
+            Sign up
           </Link>
         </div>
 
@@ -56,7 +68,9 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="right" className="px-6 py-4">
               <SheetHeader>
-                <SheetTitle className="text-left text-lg text-green-600">Menu</SheetTitle>
+                <SheetTitle className="text-left text-lg text-green-600">
+                  Menu
+                </SheetTitle>
               </SheetHeader>
               <div className="mt-6 space-y-4">
                 {navItems.map((item) => (
@@ -68,12 +82,20 @@ const Navbar = () => {
                     {item.label}
                   </Link>
                 ))}
-                <Link
-                  href="/login"
-                  className="inline-block text-green-500 border border-green-500 px-4 py-1 rounded-md hover:bg-green-500 hover:text-[#0F172A] transition"
-                >
-                  Login
-                </Link>
+                <div className="">
+                  <Link
+                    href="/login"
+                    className="inline-block text-[#035f41] border border-[#035f41] px-4 py-1 rounded-md hover:bg-[#035f41] hover:text-white transition"
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    href="/signup"
+                    className="inline-block text-[#035f41] border border-[#035f41] px-4 py-1 rounded-md hover:bg-[#035f41] hover:text-white transition"
+                  >
+                    Sign up
+                  </Link>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
