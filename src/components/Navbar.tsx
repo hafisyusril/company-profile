@@ -16,8 +16,8 @@ const Navbar = () => {
     { label: "About Us", href: "/about-us" },
     { label: "Services", href: "/products" },
     { label: "Teams", href: "/teams" },
-    { label: "Blog List", href: "/blog" },
-    { label: "Create Blog", href: "/blog/create" },
+    { label: "Blog List", href: "/blogs" },
+    { label: "Create Blog", href: "/write" },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Navbar = () => {
             Login
           </Link>
           <Link
-            href="/signup"
+            href="/sign-up"
             className="text-[#035f41] border border-[#035f41] px-4 py-1 rounded-md hover:bg-[#035f41] hover:text-white transition"
           >
             Sign up
@@ -90,7 +90,7 @@ const Navbar = () => {
                     Login
                   </Link>
                   <Link
-                    href="/signup"
+                    href="/sign-up"
                     className="inline-block text-[#035f41] border border-[#035f41] px-4 py-1 rounded-md hover:bg-[#035f41] hover:text-white transition"
                   >
                     Sign up

@@ -1,36 +1,25 @@
-// src/hoc/AuthGuard.tsx
 import Loading from "@/components/Loading";
 import { useAuthStore } from "@/store/auth";
 import { redirect } from "next/navigation";
-import { useEffect, useState, ComponentType } from "react";
+import { useEffect, useState } from "react";
 
-// HOC function
-export function AuthGuard<P extends object>(
-  WrappedComponent: ComponentType<P>
-) {
-  const WithAuth: React.FC<P> = (props) => {
+export const AuthGuard = (Component: any) => {
+  return (props: any) => {
     const { user } = useAuthStore();
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
-      const timer = setTimeout(() => setIsLoading(false), 1000);
-      return () => clearTimeout(timer);
+        setTimeout(() => {
+            setIsLoading(false)
+        },1000);
     }, []);
-
-    if (isLoading) {
-      return <Loading />;
+    if(isLoading) {
+        return <Loading />
     }
 
     if (!user) {
-      redirect("/");
+      return redirect("/");
     }
-
-    return <WrappedComponent {...props} />;
+    return <Component {...props} />;
   };
-
-  WithAuth.displayName = `WithAuth(${
-    WrappedComponent.displayName || WrappedComponent.name || "Component"
-  })`;
-
-  return WithAuth;
-}
+};
