@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import NavLinks from "./NavLinks";
 import AuthButtons from "./AuthButtons";
+import NavLinks from "./NavLinks";
 
 const MobileMenu = () => {
   return (
