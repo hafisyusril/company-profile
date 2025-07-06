@@ -1,25 +1,26 @@
 import Loading from "@/components/Loading";
 import { useAuthStore } from "@/store/auth";
 import { redirect } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ComponentType } from "react";
 
-export const AuthGuard = (Component: any) => {
-  return (props: any) => {
+export function AuthGuard<T extends {}>(Component: ComponentType<T>) {
+  const WrappedComponent = (props: T) => {
     const { user } = useAuthStore();
-    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false)
-        },1000);
+      const timer = setTimeout(() => setIsLoading(false), 1000);
+      return () => clearTimeout(timer);
     }, []);
-    if(isLoading) {
-        return <Loading />
+
+    if (isLoading) return <Loading />;
+    if (!user) {
+      redirect("/");
+      return null;
     }
 
-    if (!user) {
-      return redirect("/");
-    }
     return <Component {...props} />;
   };
-};
+
+  return WrappedComponent;
+}
