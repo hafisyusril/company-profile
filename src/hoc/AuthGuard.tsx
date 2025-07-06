@@ -3,7 +3,7 @@ import { useAuthStore } from "@/store/auth";
 import { redirect } from "next/navigation";
 import { useEffect, useState, ComponentType } from "react";
 
-export function AuthGuard<T extends {}>(Component: ComponentType<T>) {
+export function AuthGuard<T extends object>(Component: ComponentType<T>) {
   const WrappedComponent = (props: T) => {
     const { user } = useAuthStore();
     const [isLoading, setIsLoading] = useState(true);
