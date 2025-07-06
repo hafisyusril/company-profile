@@ -15,9 +15,9 @@ const MobileMenu = () => {
         <SheetHeader>
           <SheetTitle className="text-left text-lg text-green-600">Menu</SheetTitle>
         </SheetHeader>
-        <div className="mt-6 space-y-4">
+        <div className="flex flex-col gap-4">
           <NavLinks />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <AuthButtons />
           </div>
         </div>

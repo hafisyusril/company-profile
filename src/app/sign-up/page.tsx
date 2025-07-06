@@ -37,7 +37,7 @@ const SignUp = () => {
         >
           <Form className="space-y-4">
             <CardHeader>
-              <CardTitle>Register to your account</CardTitle>
+              <CardTitle>Create your HORE account Now!</CardTitle>
               <CardDescription>
                 Enter your data below to create your account
               </CardDescription>

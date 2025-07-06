@@ -56,20 +56,27 @@ const TeamsPage = () => {
             key={member.login.uuid}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-[1.02] transition-transform duration-200"
           >
-            <div className="relative w-full h-64">
-              <Image
-                src={member.picture.large}
-                alt={`${member.name.first} ${member.name.last}`}
-                fill
-                className="object-cover"
-              />
+            <div className="flex justify-center mt-4">
+              <div className="relative rounded-full overflow-hidden border-4 border-green-100 shadow-lg w-24 h-24 md:w-32 md:h-32 hover:scale-105 transition-transform duration-300">
+                <Image
+                  src={member.picture.large}
+                  alt={`${member.name.first} ${member.name.last}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
+
             <div className="p-4 text-center space-y-1">
               <h3 className="text-xl font-semibold text-[#3D2B1F]">
                 {member.name.first} {member.name.last}
               </h3>
-              <p className="text-green-600 text-sm">{roles[idx % roles.length]}</p>
-              <p className="text-[#4B3A2F] text-sm italic">{bios[idx % bios.length]}</p>
+              <p className="text-green-600 text-sm">
+                {roles[idx % roles.length]}
+              </p>
+              <p className="text-[#4B3A2F] text-sm italic">
+                {bios[idx % bios.length]}
+              </p>
             </div>
           </div>
         ))}

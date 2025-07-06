@@ -25,7 +25,7 @@ const useLogin = () => {
     },
     onSuccess: (data) => {
       onAuthSuccess({ user: data });
-      toast.success("sign in success");
+      toast.success("Login success");
       router.replace("/");
     },
     onError: (error: AxiosError<{ message: string; code: number }>) => {

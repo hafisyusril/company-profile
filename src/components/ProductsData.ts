@@ -25,7 +25,32 @@ export const ProductsData = {
       image: "/triple-peach-americano.avif",
     },
   ],
-  // Tambahkan kategori lain jika perlu
+  "Non Coffee Series" : [
+    {
+      name: "Iced Dark Chocolate",
+      price: "IDR 28K",
+      desc: "Made from 100% dark chocolate and milk",
+      image: "/iced-dark-chocolate.avif",
+    },
+    {
+      name: "Hot Dark Chocolate",
+      price: "IDR 27K",
+      desc: "Made from 100% dark chocolate and milk",
+      image: "/hot-dark-chocolate.avif",
+    },
+    {
+      name: "Iced Matcha Green Tea",
+      price: "IDR 32K",
+      desc: "Fore's special matcha powder is soft and creamy combined with fresh milk",
+      image: "/iced-matcha-green-tea.avif",
+    },
+    {
+      name: "Hot Matcha Green Tea",
+      price: "IDR 34K",
+      desc: "Fore's special matcha powder is soft and creamy combined with fresh milk.",
+      image: "/hot-matcha-green-tea.avif",
+    },
+  ]
 } as const;
 
 export type ProductCategory = keyof typeof ProductsData;

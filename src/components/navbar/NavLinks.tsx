@@ -1,15 +1,17 @@
+import { useAuthStore } from "@/store/auth";
 import Link from "next/link";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about-us" },
-  { label: "Services", href: "/products" },
-  { label: "Teams", href: "/teams" },
-  { label: "Blog List", href: "/blogs" },
-  { label: "Create Blog", href: "/write" },
-];
-
 const NavLinks = () => {
+  const { user } = useAuthStore();
+
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Products", href: "/products" },
+    { label: "Teams", href: "/teams" },
+    { label: "Blog List", href: "/blogs" },
+    ...(user ? [{ label: "Create Blog", href: "/write" }] : []),
+  ];
   return (
     <>
       {navItems.map((item) => (

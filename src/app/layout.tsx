@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
+import { Toaster } from "sonner";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +34,9 @@ export default function RootLayout({
         <ReactQueryProvider>
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </ReactQueryProvider>
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );

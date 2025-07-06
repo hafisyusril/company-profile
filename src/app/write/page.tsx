@@ -46,7 +46,7 @@ const Write = () => {
   const { mutateAsync: createBlog, isPending } = useCreateBlog();
 
   return (
-    <main className="container mx-auto px-4 pt-20">
+    <main className="container mx-auto px-4 py-20">
       <Formik
         initialValues={{
           title: "",
