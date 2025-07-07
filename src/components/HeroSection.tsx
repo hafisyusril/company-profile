@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="w-full bg-[#f4f2ee] text-[#0F172A] px-4 md:px-16 py-16">
       <div className="flex flex-col md:flex-row items-center gap-10">
         {/* Gambar kiri */}
-        <div className="relative w-full md:w-1/2 h-64 md:h-[450px] rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full md:w-1/2 h-64 md:h-[450px] rounded-lg overflow-hidden">
           <Image
             src="/ourstory2-hore.webp"
             alt="HORE Coffee Ambience"

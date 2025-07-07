@@ -15,7 +15,7 @@ const CompanyCultureSection = () => {
         {/* Kanan: Judul */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3D2B1F] leading-tight text-center md:text-right">
-            What we Value
+            That is Our Value
           </h2>
         </div>
       </div>

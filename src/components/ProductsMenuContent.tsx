@@ -10,7 +10,7 @@ const ProductsMenuContent = () => {
     <section className="w-full bg-[#f4f2ee] text-[#0F172A] px-4 md:px-16 py-24 scroll-smooth">
       <div className="flex flex-col md:flex-row gap-12">
         {/* Sidebar kategori */}
-        <aside className="w-full md:w-1/5 sticky top-24">
+        <aside className="w-full md:w-1/5 md:sticky md:top-24 z-10 bg-[#f4f2ee]">
           <ul className="space-y-4">
             {categories.map((category) => (
               <li key={category}>

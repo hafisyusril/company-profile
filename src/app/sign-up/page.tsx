@@ -37,7 +37,7 @@ const SignUp = () => {
         >
           <Form className="space-y-4">
             <CardHeader>
-              <CardTitle>Create your HORE account Now!</CardTitle>
+              <CardTitle className="text-[#035f41]">Create your HORE account Now!</CardTitle>
               <CardDescription>
                 Enter your data below to create your account
               </CardDescription>
@@ -94,7 +94,7 @@ const SignUp = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="w-full" disabled={isPending}>
+              <Button type="submit" className="w-full text-[#035f41] bg-white hover:text-white hover:bg-[#035f41] border border-[#035f41] cursor-pointer" disabled={isPending}>
                 {isPending ? <Wrench className="animate-spin" /> : "Register"}
               </Button>
             </CardFooter>

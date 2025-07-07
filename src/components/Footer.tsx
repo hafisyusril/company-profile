@@ -46,16 +46,16 @@ const Footer = () => {
 
       {/* Social Media */}
       <div className="flex justify-end mt-10 space-x-4 text-[#3D2B1F]">
-        <Link href="#" aria-label="X (Twitter)">
+        <Link href="https://x.com/" aria-label="X (Twitter)">
           <FaXTwitter className="text-2xl hover:text-green-600 transition" />
         </Link>
-        <Link href="#" aria-label="Instagram">
+        <Link href="https://www.instagram.com/" aria-label="Instagram">
           <FaInstagram className="text-2xl hover:text-green-600 transition" />
         </Link>
-        <Link href="#" aria-label="YouTube">
+        <Link href="https://www.youtube.com/" aria-label="YouTube">
           <FaYoutube className="text-2xl hover:text-green-600 transition" />
         </Link>
-        <Link href="#" aria-label="LinkedIn">
+        <Link href="https://www.linkedin.com/" aria-label="LinkedIn">
           <FaLinkedin className="text-2xl hover:text-green-600 transition" />
         </Link>
       </div>

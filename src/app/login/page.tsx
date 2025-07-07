@@ -29,7 +29,7 @@ const SignIn = () => {
         >
           <Form className="space-y-4">
             <CardHeader>
-              <CardTitle className="">Welcome Back to HORE</CardTitle>
+              <CardTitle className="text-[#035f41]">Welcome Back to HORE</CardTitle>
               <CardDescription>
                 Enter your email below to login to your account
               </CardDescription>
@@ -70,7 +70,7 @@ const SignIn = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="w-full" disabled={isPending}>
+              <Button type="submit" className="w-full cursor-pointer text-[#035f41] bg-white hover:text-white hover:bg-[#035f41] border border-[#035f41]" disabled={isPending}>
                 {isPending ? <Loader className="animate-spin" /> : "Login"}
               </Button>
             </CardFooter>
