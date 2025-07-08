@@ -5,14 +5,14 @@ const CompanyOverviewSection = () => {
   return (
     <section className="w-full bg-[#f4f2ee] text-[#0F172A] px-4 md:px-16 py-24">
       <div className="flex flex-col md:flex-row items-start justify-between gap-12">
-        {/* Kiri: Judul Besar */}
+        {/* Judul */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3D2B1F] leading-tight text-center">
             How we uncover <br /> our new story
           </h2>
         </div>
 
-        {/* Kanan: Penjelasan Detail */}
+        {/* Penjelasan */}
         <div className="w-full md:w-1/2 space-y-6 text-[#4B3A2F] text-lg leading-relaxed">
           <p>
             Founded with a passion for coffee and community, HORE has grown into more than just a coffee shop. We started from a small corner café with a vision to bring calmness and connection through every cup.

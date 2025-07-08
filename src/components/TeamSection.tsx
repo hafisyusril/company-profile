@@ -13,7 +13,7 @@ const teamMembers = [
     name: "Mouzak Raffen",
     role: "Marketing Lead",
     image: "/mouzak-raffen.webp",
-    bio: "With a love for branding and storytelling, Raffen helps bring HORE’s message of peace to the world.",
+    bio: "With a love for branding and storytelling, Raffen helps bring HOREs message of peace to the world.",
   },
   {
     name: "Puspita Dewi",
@@ -31,7 +31,7 @@ const TeamSection = () => {
           Meet Our Team
         </h2>
         <p className="mt-4 text-[#4B3A2F] text-lg">
-          The people behind HORE’s experience — passionate, kind, and grounded
+          The people behind HORE — passionate, kind, and grounded
           in purpose.
         </p>
       </div>
